@@ -1,63 +1,25 @@
 void setup()
 {
-	size(400,400);
+	size(600,600);
     noLoop();
 }
 
 void draw()
 {
-    background(192);
+    background(150,0,0);
     int sum = 0;
-    for(int y = 50; y < 350; y = y + 50)
+    for(int y = 35; y < 550; y += 50)
     {
-    	Die dieA = new Die(50,y);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
+    	for(int x = 24; x < 550; x += 50)
+    	{
+    		Die dieA = new Die(x,y);
+   			dieA.show();
+   			sum = sum + dieA.value;
+   			dieA.roll();
+    	}			
     }
-    for(int x = 100; x < 350; x = x + 50)
-    {
-    	Die dieA = new Die(x,50);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
-   	}
-   	for(int x = 100; x < 350; x = x + 50)
-    {
-    	Die dieA = new Die(x,100);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
-   	}
-   	for(int x = 100; x < 350; x = x + 50)
-    {
-    	Die dieA = new Die(x,150);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
-   	}
-   	for(int x = 100; x < 350; x = x + 50)
-    {
-    	Die dieA = new Die(x,200);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
-   	}
-   	for(int x = 100; x < 350; x = x + 50)
-    {
-    	Die dieA = new Die(x,250);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
-   	}
-   	for(int x = 100; x < 350; x = x + 50)
-    {
-    	Die dieA = new Die(x,300);
-   		dieA.show();
-   		sum = sum + dieA.value;
-   		dieA.roll();
-   	}
-    text("Sum: " + sum, 10, 20);
+    fill(255);
+    text("TOTAL = " + sum, 10, 20);
 }
 
 void mousePressed()
@@ -80,7 +42,7 @@ class Die
     {
     	if ( value == 1)
     	{
-    		fill(0);
+    		fill(255,0,0);
     		ellipse(myX+25,myY+25,10,10);
     	}
 
