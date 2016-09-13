@@ -1,16 +1,19 @@
 void setup()
 {
-	size(600,600);
+	size(750,650);
     noLoop();
+    stroke(50);
+    textSize(25);
+    textAlign(CENTER);
 }
 
 void draw()
 {
     background(150,0,0);
     int sum = 0;
-    for(int y = 35; y < 550; y += 50)
+    for(int y = 35; y < 600; y += 50)
     {
-    	for(int x = 24; x < 550; x += 50)
+    	for(int x = 24; x < 700; x += 50)
     	{
     		Die dieA = new Die(x,y);
    			dieA.show();
@@ -19,7 +22,7 @@ void draw()
     	}			
     }
     fill(255);
-    text("TOTAL = " + sum, 10, 20);
+    text("TOTAL = " + sum, 375, 25);
 }
 
 void mousePressed()
@@ -92,9 +95,8 @@ class Die
     
     void show()
     {
-        fill(255);
+        fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
         rect(myX,myY,50,50);
         fill(0);
-        //text("" + value, myX, myY);
     }
 }
