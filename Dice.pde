@@ -1,6 +1,6 @@
 void setup()
 {
-	size(750,650);
+	size(750,825);
     noLoop();
     stroke(50);
     textSize(25);
@@ -22,7 +22,7 @@ void draw()
     	}			
     }
     fill(255);
-    text("TOTAL = " + sum, 375, 25);
+    text("TOTAL = " + sum, 375, 27);
 }
 
 void mousePressed()
