@@ -1,6 +1,6 @@
 void setup()
 {
-	size(750,825);
+	size(750,650);
     noLoop();
     stroke(50);
     textSize(25);
